@@ -4,7 +4,7 @@ For this exercise I’ll focus on a specific use case to let you know how I appr
 
 I’ll start with some background to put it all in context.
 
-##Background of Project
+## Background of Project
 
 Earlier this year I was contracted by a Pension Group in Manhattan to lead the design and user experience of a Benefits Administration application. Due to some changes to their policies being implemented in 2018, they were under a time crunch to build a system that they could use to enroll new clients. The application would be used primarily by Customer Service Reps, but would also be accessible by other departments within the organization.
 
@@ -14,7 +14,7 @@ We also made an effort to establish and follow general principles for a good use
 
 After reviewing the prototypes with the stakeholders and doing some light internal user testing (we were cramped for time), we iterated and tested a few times until we felt comfortable that the user’s needs were met, the flow was smooth and the experience was consistent throughout.
 
-##Use Case
+## Use Case
 
 One of the many tasks a Customer Service Rep has to perform when enrolling an employee into a plan is Adding Beneficiaries. For each plan, different rules apply around who can be added and what allotments are allowed.
 
@@ -27,7 +27,7 @@ Once the beneficiary is added, they will show up under the specific plan and the
 
 After reviewing this initial flow with the stakeholders we identified a couple of challenges. I’ve listed these challenge below, along with the solutions we came up with (refer to the screenshots New_00 to New_09 for reference)
 
-####A. Adding beneficiaries using search was too time consuming and cumbersome
+#### A. Adding beneficiaries using search was too time consuming and cumbersome
 
 Solution: 
 When a Rep clicks to add a beneficiary, we immediately show them a list of potential beneficiaries. If one of these is a match, it’s a one-click add. If not, the Rep will need to add a new beneficiary. 
@@ -44,19 +44,19 @@ We also opted to automate as much as we could. For example, Child Benefits can o
 
 Lastly, we added a Copy from Above feature to easily share information between plans.
 	
-####B. We need to differentiate between Primary and Contingent Beneficiaries. Furthermore, you cannot add a Contingent before one or more Primaries are added.
+#### B. We need to differentiate between Primary and Contingent Beneficiaries. Furthermore, you cannot add a Contingent before one or more Primaries are added.
 
 Solution: Under each Plan we added a label for Primary. And under each label we placed the Add Beneficiary button. Only after adding a Primary Beneficiary does the Rep see a second label for Contingent and a second button to + Add a Beneficiary.
 
-####C. It was not clear enough to the Rep that they had to update percentages when two or more beneficiaries had been added. For example, 100% for one and 0% for another was not allowed.
+#### C. It was not clear enough to the Rep that they had to update percentages when two or more beneficiaries had been added. For example, 100% for one and 0% for another was not allowed.
 
 Solution: After adding a second beneficiary, highlight the Percentage field and place the focus there so the Rep can deal with updating the numbers. If there’s only one Beneficiary, we make the Percentage field Read-Only as it can only be 100%.
 
-####D. When adding a new beneficiary not already in the system, we have to take into account Beneficiary Type.
+#### D. When adding a new beneficiary not already in the system, we have to take into account Beneficiary Type.
 
 Solution: On the form screen to add a new beneficiary, show radio buttons for each beneficiary type, but default to the most common for the current plan and hide any types that are not applicable to that plan. If the Rep selects a different beneficiary type, update the form below accordingly.
 
-####E. There were too many duplicate records for beneficiaries being created.
+#### E. There were too many duplicate records for beneficiaries being created.
 
 Solution: As mentioned in A., while the Rep fills out the form for a new beneficiary we would perform a live search for any close matches and present them to the Rep.
 
